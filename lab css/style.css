@@ -1,0 +1,7 @@
+table,th{
+    border: 3px darkblue dashed;
+    border-collapse: collapse;
+}
+th{
+    padding: 20px;
+}
