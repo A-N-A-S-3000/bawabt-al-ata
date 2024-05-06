@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Scramble Game</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a98bba8d58.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+  <style>
+  
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .cardd {
+      margin-left: 39%;
+      margin-top: 3%;
+      background-color: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      width: 400px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    h1 {
+      font-size: 28px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    #word {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #333;
+      font-weight: bold;
+    }
+    #hint {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #666;
+    }
+    #timer {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #666;
+    }
+    #guess {
+      padding: 12px;
+      font-size: 16px;
+      width: calc(100% - 24px);
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      border: 2px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+    #guess:focus {
+      border-color: #4CAF50;
+    }
+    #submit-btn, #reset-btn {
+      font-size: 16px;
+      padding: 12px 24px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #submit-btn:hover, #reset-btn:hover {
+      background-color: #45a049;
+    }
+    #message {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #ff6347;
+    }
+    .divider {
+      width: 100%;
+      height: 2px;
+      background-color: #ddd;
+      margin: 20px 0;
+    }
+  
+  </style>
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent" style="position:sticky;">
+        <div class="container-fluid">
+          <!--logo-->
+          <img src="img/WhatsApp Image 2024-02-29 at 20.35.13_effc8592.jpg" alt="" height="50px" width="100px" style="padding-right: 10px;">
+          <a class="navbar-brand" href="#" style="color: black;">Buabat Al ata</a>
+          <!--toggle-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!--sidebar header-->
+          <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header text-white border-bottom">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">buabat al atta</h5>
+              <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+    
+            <!--sidebar body-->
+            <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+              <ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active mx-2 text-ligh" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="aboutus.html">about us</a>
+                </li>
+    
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="contact .html">contact</a>
+                  </li>
+    
+    
+    
+    
+                <li class="nav-item dropdown mx-2">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="donation.html">donations</a></li>
+                    <li><a class="dropdown-item" href="store.html">store</a></li>
+                    <li><a class="dropdown-item" href="volenteer .html">volenteer</a></li>
+                    
+                  </ul>
+                </li>
+              </ul>
+    
+              <!--login-->
+              <div class="d-flex flex-column flex-lg-row justify-content-center  align-items-center gap-3">
+                <a href="login.html" class="text-dark">Login</a>
+                <a href="signin.html" class="text-white text-decoration-none px-3 py-1  rounded-4" style="background-color: #cc8a69;">sign up</a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+  <div class="cardd">
+    <h1>Word Scramble Game</h1>
+    <p>Unscramble the letters to form a name.</p>
+    <div class="divider"></div>
+    <div id="word"></div>
+    <p id="hint"></p>
+    <p id="timer">Time Left: <span id="time">30</span> seconds</p>
+    <div class="divider"></div>
+    <input type="text" id="guess" placeholder="Your Guess">
+    <button id="submit-btn">Submit</button>
+    <button id="reset-btn">Change Name</button>
+    <div id="message"></div>
+    <p id="score">Score: <span id="correct">0</span></p>
+  </div>
+
+  <script>
+    /*
+    This script contains a game where players need to guess names based on hints.
+    It includes an array of names with hints, a timer, and functions for the game logic.
+    The game stores correct and incorrect guesses in localStorage.
+  */
+    const names = [
+    
+      { name: "علي بن أبي طالب" , hint: "الصحابي الذي لم يسجد لصنم"},
+      { name: "علي بن أبي طالب", hint: "أبو المساكين" },
+      { name: "علي بن أبي طالب", hint: "الصحابي الذي كان يخرج باليل لجمع الحطب حتى لا يشعر أهل المدينة بالبرد" },
+      { name: "عبدالرحمن بن عوف", hint: "الصجابي الذي دعا له الرسول بالبركة" },
+      { name: "حاتم الطائي", hint: "من أشد العرب كرما" },
+      { name: "عثمان بن عفان", hint: "أكثر الصحابة إنفاقا في سبيل الله" },
+      { name: "أبو بكر الصديق", hint: "كان مع رسول الله عند هجرته الى المدينة" },
+      { name: "سمية أم عمار", hint: "أول شهيدة في الاسلام" },
+      { name: "عثمان بن عفان", hint: "لقب بالنورين " },
+      { name: "بلال بن رباح", hint: "مؤذن رسول الله" },
+      { name: "يونس", hint: "النبي الذي ابتلعه الحوت" },
+      { name: "إبراهيم", hint: "لقب بالخليل " },
+      { name: "خالد بن الوليد", hint: "سيف الله المسلول" },
+      { name: "يونس", hint: "لقب بذي النون" },
+      { name: "عمر بن الخطاب", hint: "كتب التاريخ الهجري" },
+      { name: "عمر بن الخطاب", hint: "لقب بالفاروق" },
+      { name: "موسى", hint: "كليم الله" },
+      { name: "زيد بن حارثة", hint: "صحابي ذكر اسمه في القرآن" },
+      { name: "رفيدة بنت سعد", hint: "أول ممرضة" },
+      { name: "زكريا", hint: "النبي الذي وهبه الله بالذربة في سن كبير" },
+
+    ];
+
+    // Variables declaration
+    let index;
+    let currentName;
+    let random;
+    let score = 0;
+    let input;
+    let timeLeft = 60;
+    let timeInterval;
+
+    let namesShown = [];
+    let correct = [];
+    let wrong = [];
+
+    // Function to start the timer
+    const timer = () => {
+        timeInterval = setInterval(function() {
+            if (timeLeft > 0) {
+                timeLeft--;
+                document.getElementById('time').textContent = timeLeft;
+            } else {
+                clearInterval(timeInterval);
+                document.getElementById('message').innerText = "Time's up!";
+                document.getElementById('message').style.color = "#ff6347";
+                // Store correct and incorrect guesses in localStorage
+                localStorage.setItem('correctGuesses', correct.length);
+                localStorage.setItem('incorrectGuesses', wrong.length);
+                localStorage.setItem('names', JSON.stringify(names));
+                localStorage.setItem('names_shown', namesShown);
+                localStorage.setItem('correct', correct);
+                localStorage.setItem('wrong', wrong);
+                setTimeout(function() {
+                    window.location.href = "result.html";
+                }, 2000);
+            }
+        }, 1000);
+    }
+
+    // Function to start the game
+    const game = () => {
+    // Select a random index from the names array
+    index = Math.floor(Math.random() * names.length);
+    
+    // If the selected index has been shown before
+    if (namesShown.includes(index)) {
+        // If all names have been shown at least once, reset namesShown array
+        if (namesShown.length === names.length) {
+            namesShown = [];
+        }
+        // Recursive call to get a new random index
+        return game();
+    }
+    
+    // Add the current index to namesShown array
+    namesShown.push(index);
+    // Get the random name object
+    random = names[index];
+    // Split the name into letters
+    let nameLetters = random.name.split("");
+
+    // Shuffle the letters of the name
+    for (let i = nameLetters.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1)); 
+        [nameLetters[i], nameLetters[j]] = [nameLetters[j], nameLetters[i]]; 
+    }
+
+    // Display shuffled name and hint
+    document.getElementById('word').innerText = nameLetters.join("");
+    document.getElementById('hint').innerText = "Hint: " + random.hint; 
+    // Store the current name in lowercase
+    currentName = random.name.toLowerCase();
+    // Set maximum length of input field to the length of the current name
+    input = document.getElementById("guess").setAttribute("maxlength", currentName.length);
+}
+
+    // Function to check the guessed name
+    const checkName = () => {
+    // Get the value of the input field and convert it to lowercase
+    input = document.getElementById("guess").value.toLowerCase();
+    
+    // If input field is empty, display a message and return
+    if (input === "") {
+        document.getElementById('message').innerText = "You need to enter a name";
+        document.getElementById('message').style.color = "#ff6347";
+        return;
+    }
+
+    // If the input doesn't match the current name
+    if (currentName !== input) {
+        // Add the index to the wrong guesses array
+        wrong.push(index);
+        // Display an incorrect message and adjust time
+        document.getElementById('message').innerText = "Incorrect. Try again!";
+        timeLeft -= 5;
+        document.getElementById('message').style.color = "#ff6347";
+    } else {
+        // If the input matches the current name
+        // Add the index to the correct guesses array
+        correct.push(index);
+        // Display a correct message, adjust time, and update score
+        document.getElementById('message').innerText = "Correct!";
+        document.getElementById('message').style.color = "#4CAF50";
+        timeLeft += 3;
+        score++;
+        document.getElementById('correct').innerText = score;
+    }
+    // Call the game function to start a new round
+    game();
+}
+
+    // Event listeners
+    document.getElementById('submit-btn').addEventListener('click', checkName);
+    document.getElementById('reset-btn').addEventListener('click', game);
+    
+    // Start timer and game
+    timer();
+    game();
+  </script>
+</body>
+</html>
