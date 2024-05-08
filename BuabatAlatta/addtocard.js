@@ -27,8 +27,6 @@ function calculate(){
     }
     // write the total in html file
     document.getElementById("totalProduct1").innerHTML = subtotal_Ele1;
-
-
     // second elemnet
     // read price 
     var elem2price = parseInt(document.getElementById("secondelementPrice").textContent);
@@ -43,8 +41,6 @@ function calculate(){
     }
     // write the total in html file
     document.getElementById("totalProduct2").innerHTML = subtotal_Ele2;
-
-
     // third elemnet
     // read price 
     var elem3price = parseInt(document.getElementById("thirdelementPrice").textContent);
@@ -57,56 +53,10 @@ function calculate(){
         alert("Invalid input");
         return;
     }
-
-    // fourth elemnet
-    // read price 
-    var elem4price = parseInt(document.getElementById("forthelementPrice").textContent);
-    // read quantity
-    var elem4quant = parseInt(document.getElementById("num4").value);
-    // compute total for this product
-    var subtotal_Ele4 = (elem4price * elem4quant);
-    // check quantity is valid
-    if(!Number.isInteger(subtotal_Ele4)){
-        alert("Invalid input");
-        return;
-    }
     // write the total in html file
-    document.getElementById("totalProduct5").innerHTML = subtotal_Ele5;
-
-    // fiveth elemnet
-    // read price 
-    var elem5price = parseInt(document.getElementById("fithelementPrice").textContent);
-    // read quantity
-    var elem5quant = parseInt(document.getElementById("num5").value);
-    // compute total for this product
-    var subtotal_Ele5 = (elem5price * elem5quant);
-    // check quantity is valid
-    if(!Number.isInteger(subtotal_Ele5)){
-        alert("Invalid input");
-        return;
-    }
-    // write the total in html file
-    document.getElementById("totalProduct5").innerHTML = subtotal_Ele5;
-
-    // sixth elemnet
-    // read price 
-    var elem6price = parseInt(document.getElementById("sixthelementPrice").textContent);
-    // read quantity
-    var elem6quant = parseInt(document.getElementById("num6").value);
-    // compute total for this product
-    var subtotal_Ele6 = (elem6price * elem6quant);
-    // check quantity is valid
-    if(!Number.isInteger(subtotal_Ele6)){
-        alert("Invalid input");
-        return;
-    }
-    // write the total in html file
-    document.getElementById("totalProduct6").innerHTML = subtotal_Ele5;
-
-
-
+    document.getElementById("totalProduct3").innerHTML = subtotal_Ele3;
     // calculation
-    var solution = (elem1price * elem1quant) + (elem2price * elem2quant) + (elem3price * elem3quant) + (elem4price * elem4quant) + (elem5price * elem5quant) + (elem6price * elem6quant);
+    var solution = (elem1price * elem1quant) + (elem2price * elem2quant) + (elem3price * elem3quant);
     var discountvalue = solution * discount;
     var total  = solution - discountvalue;
     // write data in html file
