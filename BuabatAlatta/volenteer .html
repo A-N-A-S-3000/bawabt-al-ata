@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <style>
+        #first{
+            padding-left: 5%;
+            padding-top: 5%;
+        }
+
+        .welcome{
+    background: url(https://i.ibb.co/G3CsM7Y/tryyyy-1.png) rgba(0, 0, 0, 0.2);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size:80% 100%;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent ">
+        <div class="container-fluid">
+          <!--logo-->
+          <img src="img/WhatsApp Image 2024-02-29 at 20.35.13_effc8592.jpg" alt="" height="50px" width="100px" style="padding-right: 10px;">
+          <a class="navbar-brand" href="#" >buabat al atta</a>
+          <!--toggle-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!--sidebar header-->
+          <div class="sidebar offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header text-white border-bottom">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <!--sidebar body-->
+            <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+              <ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active mx-2 text-ligh" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link" href="aboutus.html">about us</a>
+                </li>
+
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="contact .html">contact</a>
+                  </li>
+
+
+
+
+                <li class="nav-item dropdown mx-2">
+                  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="donation.html">donations</a></li>
+                    <li><a class="dropdown-item" href="store.html">store</a></li>
+                    <li><a class="dropdown-item" href="volenteer .html">volenteer</a></li>
+                    
+                  </ul>
+                </li>
+              </ul>
+
+              <!--login-->
+              <div class="d-flex flex-column flex-lg-row justify-content-center  align-items-center gap-3">
+                <a href="login.html" class="text-black">Login</a>
+                <a href="signin.html" class="text-white text-decoration-none px-3 py-1  rounded-4" style="background-color: #cc8a69;">sign up</a>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </nav>
+
+        <div id="myCarousel" class="carousel slide mb-6 pointer-event" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" style="height: 400px;">
+              <img src="img/what-is-disaster-management (1).jpg" alt="" class="bd-placeholder-img " width="100%" height="100%">
+
+              <div class="container">
+                <div class="carousel-caption text-start">
+                  <h1 style="font-size: 50px;">Disaster Response.</h1>
+                  <p  style="font-size: 30px;">providing immediate aid like food, water, and shelter to affected communities.</p>
+                  <p><a class="btn btn-lg btn-primary" href="signin.html">Sign up today</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item" style="height: 400px;">
+              <img src="img/repair-home.jpg" alt="" class="bd-placeholder-img " width="100%" height="100%">
+              <div class="container">
+                <div class="carousel-caption">
+                  <h1 style="font-size: 50px;">Home Repairs.</h1>
+                  <p style="font-size: 30px;">repair homes for the elderly or low-income families, ensuring safe living conditions.</p>
+                  <p><a class="btn btn-lg btn-primary" href="signin.html">Sign up today</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item" style="height: 400px;">
+              <img src="img/back to school.jpg" alt="" class="bd-placeholder-img " width="100%" height="100%">
+              <div class="container">
+                <div class="carousel-caption text-end">
+                  <h1 style="font-size: 50px;">Back-to-School.</h1>
+                  <p style="font-size: 30px;">distribute school supplies to children in need.</p>
+                  <p><a class="btn btn-lg btn-primary" href="signin.html">Sign up today</a></p>
+                </div>
+              </div>
+            </div>
+
+            
+
+            
+
+
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      
+      
+
+      
+
+      
+      
+
+        <br>
+        <h1 style="align-items: center; padding-left: 38%;">you can volenteer as</h1>
+          <hr>
+          <form action="" method="post">
+          <div class="row featurette">
+            <div class="col-md-7" id="first">
+              <h2 class="featurette-heading fw-normal lh-1" >Driver </h2>
+              <p class="lead">Our initiative, a charitable online platform, facilitates diverse contributions for those in need, including money, food, and clothing. Direct communication is encouraged for donations, while a seasonal box provides assistance for school or holidays, and an information box announces cultural activities. 
+            </p>
+            <a href="vollenteerDB.php"><button class="btn btn-primary" type="button" style="width: 800px;" name="btn_1" value="btn_1"> <h5>Apply now</h5> </button></a>
+            <input type="hidden" value="Driver" name="vol_1">
+            </div>
+            <div class="col-md-5">
+                <img src="img/drive.jpeg" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" style="padding-left: 150px;" >
+            </div>
+          </div>
+        </form>
+          <hr class="featurette-divider">
+          
+          <div class="container" style="margin-left: 100px;">
+            <form action="" method="post">
+            <div class="row featurette">
+                <div class="col-md-5">
+                    <img src="img/box maneger.jpeg" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="500">
+                </div>
+                <div class="col-md-7" style="padding-left: 0;
+                padding-top: 8%;">
+                    <h2 class="featurette-heading fw-normal lh-1">box manager</h2>
+                    <p class="lead" style="width: 800px;">As a charitable online platform, our Box Manager streamlines diverse contributions, ensuring donations of money, food, and clothing directly reach those in need. The Box Manager encourages direct communication for contributions, while featuring a seasonal box for school or holiday assistance and an information box for cultural activity announcements.</p>
+                    <a href="vollenteerDB.php"><button class="btn btn-primary" type="button" style="width: 800px;" name="btn_2"> <h5>Apply now</h5> </button></a>
+                    <input type="hidden" value="box manager" name="vol_2">
+                </div>
+            </div>
+          </form>
+        </div>
+      
+          <hr class="featurette-divider">
+          <form action="" method="post"></form>
+          <div class="row featurette">
+            <div class="col-md-7" id="first">
+              <h2 class="featurette-heading fw-normal lh-1">Carpentry 
+            </span></h2>
+              <p class="lead">Seeking a Carpentry volunteer to join our initiative, dedicated to crafting furniture for those in need. Your skills will contribute to creating a positive impact by providing essential items to less fortunate individuals. Join us in making a meaningful difference through your carpentry expertise. 
+            </p>
+            <a href="vollenteerDB.php" class="btn btn-primary" type="button" style="width: 800px;" name="btn_3"> <h5>Apply now</h5></a>
+            <input type="hidden" value="Carpentry" name="vol_3">
+            </div>
+            <div class="col-md-5" >
+                <img src="img/Carpentry.jpeg" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" style="padding-left: 150px;">
+            </div>
+          </div>
+        </form>
+          <hr class="featurette-divider">
+      
+          
+      
+        </div><!-- /.container -->
+      
+      
+        <!-- FOOTER -->
+        <div class="container">
+          <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div class="col mb-3">
+                <img src="img/WhatsApp Image 2024-02-29 at 20.35.13_effc8592.jpg" alt="logo" width="200px">
+              <p class="text-body-secondary">Buabat Alatta 2024</p>
+            </div>
+        
+            <div class="col mb-3">
+            </div>
+        
+            <div class="col mb-3">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+                <li class="nav-item mb-2"><a href="volenteer .html" class="nav-link p-0 text-body-secondary">volenteer</a></li>
+                <li class="nav-item mb-2"><a href="store.html" class="nav-link p-0 text-body-secondary">Store</a></li>
+                <li class="nav-item mb-2"><a href="donation.html" class="nav-link p-0 text-body-secondary">Donations</a></li>
+                <li class="nav-item mb-2"><a href="checkout_delivery.html" class="nav-link p-0 text-body-secondary">checkout</a></li>
+                
+              </ul>
+            </div>
+            <div class="col mb-3">
+              <h5>Information</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="contact .html" class="nav-link p-0 text-body-secondary">Contact us</a></li>
+                <li class="nav-item mb-2"><a href="aboutus.html" class="nav-link p-0 text-body-secondary">About us</a></li> 
+              </ul>
+            </div>
+        
+          </footer>
+        </div>
+
+      
+</body>
+</html>
