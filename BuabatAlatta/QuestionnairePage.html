@@ -197,11 +197,10 @@
       </h3>
       <br />
       <form
-        get="https://httpbin.org/get"
-        action="submit"
+        action="questionier.php"
+        method="post"
         name="Questionerform"
         onsubmit="return validationForm()"
-        method="post"
       >
         <h4>Enter your age:</h4>
 
@@ -324,7 +323,7 @@
         </h4>
         <input
           type="checkbox"
-          name="improved_page"
+          name="improved_page[]"
           id="improved_page"
           value="store"
         />
@@ -332,7 +331,7 @@
         <br />
         <input
           type="checkbox"
-          name="improved_page"
+          name="improved_page[]"
           id="improved_page"
           value="voleenter"
         />
@@ -341,7 +340,7 @@
 
         <input
           type="checkbox"
-          name="improved_page"
+          name="improved_page[]"
           id="improved_page"
           value="billing"
         />
@@ -349,7 +348,7 @@
         <br />
         <input
           type="checkbox"
-          name="improved_page"
+          name="improved_page[]"
           id="improved_page"
           value="donation"
         />
@@ -357,7 +356,7 @@
         <br />
         <input
           type="checkbox"
-          name="improved_page"
+          name="improved_page[]"
           id="improved_page"
           value="home"
         />
