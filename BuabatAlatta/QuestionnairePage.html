@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+
+    <style>
+      body {
+        background-color: #ccc; /* Set overall background color */
+        font-family: Arial, sans-serif; /* Set font family for entire page */
+        color: #333; /* Set default text color */
+      }
+      header {
+        background-color: #007bff; /* Set header background color */
+        padding: 15px 0; /* Add padding to header */
+        text-align: center; /* Center align header content */
+        color: #fff; /* Set header text color */
+      }
+      .container {
+        background-color: #fff; /* Set container background color */
+        padding: 30px; /* Add padding to container */
+        border-radius: 10px; /* Add border-radius to container */
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+        max-width: 900px; /* Limit container width */
+        margin: auto; /* Center container */
+        margin-top: 50px; /* Add some top margin */
+      }
+      h1,
+      h3,
+      h4,
+      h5 {
+        color: #333; /* Set text color */
+      }
+      label {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 18px;
+      }
+      input[type="radio"],
+      input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+      }
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+      input[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-transparent"
+      style="position: sticky"
+    >
+      <div class="container-fluid">
+        <!--logo-->
+        <img
+          src="img/WhatsApp Image 2024-02-29 at 20.35.13_effc8592.jpg"
+          alt=""
+          height="50px"
+          width="100px"
+          style="padding-right: 10px"
+        />
+        <a class="navbar-brand" href="#" style="color: white">Buabat Al ata</a>
+        <!--toggle-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!--sidebar header-->
+        <div
+          class="sidebar offcanvas offcanvas-start"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header text-white border-bottom">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+              buabat al atta
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white shadow-none"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <!--sidebar body-->
+          <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
+            <ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link active mx-2 text-ligh"
+                  aria-current="page"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="aboutus.html">about us</a>
+              </li>
+
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="contact .html">contact</a>
+              </li>
+
+              <li class="nav-item dropdown mx-2">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="donation.html">donations</a>
+                  </li>
+                  <li><a class="dropdown-item" href="store.html">store</a></li>
+                  <li>
+                    <a class="dropdown-item" href="volenteer .html"
+                      >volenteer</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <!--login-->
+            <div
+              class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3"
+            >
+              <a href="login.html" class="text-white">Login</a>
+              <a
+                href="signin.html"
+                class="text-white text-decoration-none px-3 py-1 rounded-4"
+                style="background-color: #cc8a69"
+                >sign up</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <h1>Questionnaire page</h1>
+    <br />
+    <div class="container">
+      <h3>
+        Your insights fuel our mission. Share securely. Your feedback is
+        confidential, seen only by us, and never shared externally. Together,
+        let's create meaningful change
+      </h3>
+      <br />
+      <form
+        action="questionier.php"
+        method="post"
+        name="Questionerform"
+        onsubmit="return validationForm()"
+      >
+        <h4>Enter your age:</h4>
+
+        <input type="radio" id="age" name="age" value="less than 18" />
+        <label for="">Less than 18</label>
+        <br />
+        <input type="radio" id="age" name="age" value="18-25" />
+        <label for="">18-25</label>
+        <br />
+        <input type="radio" id="age" name="age" value="25-35" />
+        <label for="">25-35</label>
+        <br />
+        <input type="radio" id="age" name="age" value="more than 35" />
+        <label for="">more than 35</label>
+        <br />
+        <br />
+        <h4>Enter your Gender:</h4>
+
+        <input type="radio" id="gender" name="gender" value="male" />
+        <label for="">Male</label> <br />
+        <input type="radio" id="gender" name="gender" value="female" />
+        <label for="">Female</label> <br />
+        <br />
+
+        <h4>
+          How was your experience with the donation process on our website?
+        </h4>
+        <input
+          type="radio"
+          name="donation_defecality"
+          id="donation_defecality"
+          value="smooth"
+        />
+        <label for="">Smooth and intuitive </label>
+        <br />
+        <input
+          type="radio"
+          name="donation_defecality"
+          id="donation_defecality"
+          value="Somewhat confusing
+          "
+        />
+        <label for="">Somewhat confusing </label>
+        <br />
+        <input
+          type="radio"
+          name="donation_defecality"
+          id="donation_defecality"
+          value="Difficult
+        "
+        />
+        <label for="">Difficult to complete </label>
+        <br />
+        <br />
+
+        <h4>
+          Did you find the information about volunteering opportunities on our
+          website helpful?
+        </h4>
+
+        <input
+          type="radio"
+          name="voleenter_difficality"
+          id="voleenter_difficality"
+          value="helpful"
+        />
+        <label for="">Very helpful, clear instructions</label>
+        <br />
+        <input
+          type="radio"
+          name="voleenter_difficality"
+          id="voleenter_difficality"
+          value="Somewhat helpful, could be clearer"
+        />
+        <label for="">Somewhat helpful, could be clearer</label>
+        <br />
+        <input
+          type="radio"
+          name="voleenter_difficality"
+          id="voleenter_difficality"
+          value="Not helpful, difficult to find relevant information"
+        />
+        <label for=""
+          >Not helpful, difficult to find relevant information</label
+        >
+        <br />
+        <br />
+        <h4>
+          Did you find a good variety of products available for
+          purchase/donation in our store?
+        </h4>
+        <input
+          type="radio"
+          name="store_difficalty"
+          id="store_difficalty"
+          value="Yes, a wide selection"
+        />
+        <label for="">Yes, a wide selection</label>
+        <br />
+        <input
+          type="radio"
+          name="store_difficalty"
+          id="store_difficalty"
+          value="Somewhat, but could use more variety"
+        />
+        <label for="">Somewhat, but could use more variety</label>
+        <br />
+        <input
+          type="radio"
+          name="store_difficalty"
+          id="store_difficalty"
+          value="No, limited options available"
+        />
+        <label for="">No, limited options available</label>
+        <br />
+        <br />
+        <h4>
+          Which page do you believe requires enhancement the most on our
+          website?
+        </h4>
+        <input
+          type="checkbox"
+          name="improved_page[]"
+          id="improved_page"
+          value="store"
+        />
+        <label for="">store best_page</label>
+        <br />
+        <input
+          type="checkbox"
+          name="improved_page[]"
+          id="improved_page"
+          value="voleenter"
+        />
+        <label for="">voleenter page</label>
+        <br />
+
+        <input
+          type="checkbox"
+          name="improved_page[]"
+          id="improved_page"
+          value="billing"
+        />
+        <label for="">billing page</label>
+        <br />
+        <input
+          type="checkbox"
+          name="improved_page[]"
+          id="improved_page"
+          value="donation"
+        />
+        <label for="">donation page</label>
+        <br />
+        <input
+          type="checkbox"
+          name="improved_page[]"
+          id="improved_page"
+          value="home"
+        />
+        <label for="">home page</label>
+        <br />
+
+        <h4>
+          On a scale of 1 to 10, how satisfied are you with your experience on
+          the website?
+        </h4>
+        <input type="text" name="satisfication" value="" />
+        <br />
+        <br />
+        <h4>
+          Did you encounter any difficulties while using the website?and how?
+        </h4>
+        <textarea
+          id="difficalities"
+          name="difficalities"
+          rows="6"
+          cols="50"
+          placeholder="Write here please "
+        ></textarea>
+        <br />
+        <br />
+        <h4>Did you find the design of the website visually appealing?</h4>
+        <textarea name="disgn" id="disgn" cols="50" rows="6"></textarea>
+        <h4>Do you have any suggestions for how we can improve the website?</h4>
+        <textarea
+          name="suggestions"
+          id="suggestions"
+          cols="50"
+          rows="6"
+        ></textarea>
+        <br />
+        <br />
+        <h4>
+          Please provide your email if we need to discuss your feedback further;
+          we'll contact you via email.
+        </h4>
+
+        <input type="text" name="email" id="email" />
+        <h5>
+          I appreciate your time and assistance. May blessings be upon you
+        </h5>
+        <br />
+        <input type="submit" value="send" name="submit" />
+        <br />
+        <br />
+      </form>
+
+      <script>
+        function validationForm() {
+          let userAge = document.forms["Questionerform"]["age"];
+          let email = document.forms["Questionerform"]["email"];
+          let satisfication = document.forms["Questionerform"]["satisfication"];
+          var sat_num = parseInt(satisfication.value);
+          let check_page = document.forms["Questionerform"]["improved_page"];
+          // the email should contain at @ if not display massage
+          if (email.value.indexOf("@", 0) < 0) {
+            alert("please enter a valid e-mail address");
+            email.focus();
+            return false;
+          }
+          //check the user should enter his age if not dissplay massage
+          if (userAge.value == "") {
+            alert("Please enter your age");
+            userAge.focus();
+            return false;
+          }
+          // check the satisfication number should not excced 10 and not less than 1
+          if (sat_num < 1 || sat_num > 10) {
+            alert("please enter a valid number on satisfication");
+            satisfication.focus();
+            return false;
+          }
+
+          //let the user enter atleast one page if not display massage
+          let checked = false;
+
+          for (let i = 0; i < check_page.length; i++) {
+            if (check_page[i].checked) {
+              checked = true;
+              break;
+            }
+          }
+
+          if (!checked) {
+            alert("Please choose at least one page");
+            check_page[0].focus();
+            return false;
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to our Search Page</h1>
+    <br />
+    <form action="search.php" method="post">
+      <h3>Please enter your username:</h3>
+      <input type="text" name="inp_usermane" />
+      <h3>at which page are you willing to Search</h3>
+      <input type="radio" name="page_type" id="page_type" value="donations" />
+      <span>donation</span>
+      <br />
+      <input type="radio" name="page_type" id="page_type" value="store" />
+      <span>store</span>
+      <br />
+      <input type="radio" name="page_type" id="page_type" value="voleenteer" />
+      <span>voleenter</span>
+      <br />
+
+      <input type="submit" value="search" />
+    </form>
+  </body>
+</html>
