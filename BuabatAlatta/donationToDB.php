@@ -31,24 +31,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Prepare the values for donation items
     $donationItemsValues = "";
-    echo "<table border='1'>
-                            <tr>
-                                <th>First Name</th>
-                                <th>Last Name</th>
-                                <th>Username</th>
-                                <th>donationType Type</th>
-                                <th>Quantity</th>
-                            </tr>";
     foreach ($donationItems as $item) {
-        $donationType = $item['type'];
+        $donationType = $item['type']; 
         $quantity = $item['quantity'];
-        echo "<tr>
-                                <td>" . $firstName . "</td>
-                                <td>" . $lastName . "</td>
-                                <td>" . $username . "</td>
-                                <td>" . $donationType . "</td>
-                                <td>" . $quantity . "</td>
-                            </tr>";
         $donationItemsValues .= "('$firstName', '$lastName', '$username', '$donationType', '$quantity'),";
     }
     $donationItemsValues = rtrim($donationItemsValues, ",");

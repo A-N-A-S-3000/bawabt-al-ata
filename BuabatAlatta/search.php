@@ -19,6 +19,10 @@ if ($conn->connect_error) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search Results</title>
+    <style>
+       
+    </style>
+    </style>
 </head>
 <body>
     <h1>Search Results</h1>
@@ -111,7 +115,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "All fields are required.";
     }
-} 
+} else {
+    echo "Invalid request method.";
+}
 
 // Close the database connection
 $conn->close();
@@ -133,21 +139,30 @@ $conn->close();
                               
                             </tr>";
                     }
-                     echo "<tr> 
-                       <td><input type='text' name='vollenteer_name' id='page_type' placeholder='vollenteer_name'/>  </td> 
-                       <td><input type='text' name='vollenteer_number' id='page_type' placeholder='vollenteer_number'/>  </td> 
-                       <td><input type='text' name='vollenteer_type' id='page_type' placeholder='vollenteer_type'/>  </td> 
-                       </td> 
-                       
-                       </tr>";
-
-                       
+                    echo "<tr> 
+                    <td><input type='text' name='vollenteer_name' placeholder='Volunteer Name'/></td> 
+                    <td><input type='text' name='vollenteer_number' placeholder='Volunteer Number'/></td> 
+                    <td><input type='text' name='vollenteer_type' placeholder='Volunteer Type'/></td> 
+                    <td><input type='submit' name='delete' value='Delete' style='border: none;'/></td>
+                  </tr>";
+                        
                     echo "</table>";
                     
-                    echo "add in the last column detail if you want to delete or insert <br>";
-                    echo "<input type='submit' name='delete' value='Delete'/> ";
-                    echo "<input type='button' name='insert' onclick='location.href=\"vol_inset.php\"' value='Insert'/> ";
+                   
+                    
                     echo "</form>";
+
+                    ?>
+                       <form action="vol_to_database.php" method="post">
+    <input type="text" name="username" placeholder="Volunteer Name"/>
+    <input type="text" name="phoneNumber" placeholder="Volunteer Number"/>
+    <input type="text" name="exampleRadios" placeholder="Volunteer Type"/>
+    <input type="submit" name="insert" value="Insert"/>
+</form>
+
+                       <?php 
+                        echo "add in the before last column detail if you want to delete or in last column if yo want to insert <br>";
+                    
                 } else {
                     echo "No results found for username: " . $username;
                 }
@@ -180,7 +195,7 @@ $conn->close();
                                 <td>" . $row["order_id"] . "</td>
                                 <td>" . $row["quantity"] . "</td>
                                 <td>" . $row["Box"] . "</td>
-
+\
                             </tr>";
                     }
                     echo "</table>";

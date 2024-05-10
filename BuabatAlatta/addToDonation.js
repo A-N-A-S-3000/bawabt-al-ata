@@ -16,7 +16,14 @@ window.onload = function () {
     discount = 0.05;
   }
 
-
+  // Retrieve quantities from localStorage and update the input fields
+  for (var i = 1; i <= 6; i++) {
+    var inputId = "num" + i;
+    var currentValue = localStorage.getItem(inputId);
+    if (currentValue) {
+      document.getElementById(inputId).value = currentValue;
+    }
+  }
   calculate();
 };
 
